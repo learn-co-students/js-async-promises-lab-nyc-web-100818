@@ -46,21 +46,21 @@ describe('index', () => {
     })
   })
 
-  describe('askQuestionThenRemoveQuestion', function(){
-    let questionContainer;
-    let removeQuestionSpy
-    beforeEach(function () {
-      questionContainer = document.querySelector('.question-container')
-     });
-
-    it('should append the question for 10 seconds and then remove the question when the promise resolves', function(){
-      let resolvingPromise = askQuestionThenRemoveQuestion(1000)
-      expect(questionContainer.innerHTML).to.eq("Lightning never strikes in the same place twice")
-      resolvingPromise.then( (result) => {
-          expect(questionContainer.innerHTML).to.equal('');
-      })
-    })
-  })
+  // describe('askQuestionThenRemoveQuestion', function(){
+  //   let questionContainer;
+  //   let removeQuestionSpy
+  //   beforeEach(function () {
+  //     questionContainer = document.querySelector('.question-container')
+  //    });
+  //
+  //   it('should append the question for 10 seconds and then remove the question when the promise resolves', function(){
+  //     let resolvingPromise = askQuestionThenRemoveQuestion(1000)
+  //     expect(questionContainer.innerHTML).to.eq("Lightning never strikes in the same place twice")
+  //     resolvingPromise.then( (result) => {
+  //         expect(questionContainer.innerHTML).to.equal('');
+  //     })
+  //   })
+  // })
 
   describe('trueAndFalseButtons', function(){
     it('selects and returns the true and false buttons in the index.html file', function(){
