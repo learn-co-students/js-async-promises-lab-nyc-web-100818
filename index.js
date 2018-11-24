@@ -15,10 +15,13 @@ function appendQuestion(question) {
 // const questionCont = document.querySelector('.question-container')
 // questionCont.innerHTML = question.questionText
 
-function askQuestionThen() {
+function askQuestionThen(time) {
   question = questions[0]
-  return new Promise(function(resolve, reject) {
-    resolve('asked question!')
+  appendQuestion(question)
+  return new Promise(function(resolve){
+    setTimeout(function(){
+      resolve(question)
+    }, time)
   })
 }
 
