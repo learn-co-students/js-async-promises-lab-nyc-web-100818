@@ -1,5 +1,5 @@
 JS Async Promises Lab
----
+--- 
 
 ## Objectives
 1. Practice working with setTimeout and asynchronous code
